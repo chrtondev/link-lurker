@@ -1,4 +1,5 @@
 import streamlink
+import vlc
 
 def view_who_is_live():
     # open the tct file or give error
