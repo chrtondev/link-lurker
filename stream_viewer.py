@@ -1,5 +1,6 @@
 import streamlink
 import vlc
+import time 
 
 def view_who_is_live():
     # open the tct file or give error
@@ -15,13 +16,14 @@ def view_who_is_live():
 
     # Check the live status for each streamer
     for streamer in streamers:
+        time.sleep(1.5)        
         twitch_url = f"https://twitch.tv/{streamer}"
         try:
             streams = streamlink.streams(twitch_url)
             if streams:
-                print(f"{streamer} :: live")
+                print(f"{streamer} :: \033[32mlive\033[0m")
             else:
-                print(f"{streamer} :: not live")
+                print(f"{streamer} :: \033[91mnot live\033[0m")
         except Exception as e:
             print(f"Error checking live status for {streamer}: {e}")
             print(f"{streamer} :: not live")

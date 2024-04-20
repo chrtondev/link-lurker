@@ -1,10 +1,9 @@
 import stream_viewer
 import streamer_manager
-from pytermgui import tim
+
 
 def main_menu():
     while True:
-        print(tim.parse("[91]1. View Who Is Live[/]"))
         print("\n1. View Who Is Live")
         print("2. Edit Streamer List")
         print("3. Watch Stream")
