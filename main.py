@@ -1,9 +1,11 @@
 import stream_viewer
 import streamer_manager
+from pytermgui import tim
 
 def main_menu():
     while True:
-        print("1. View Who Is Live")
+        print(tim.parse("[91]1. View Who Is Live[/]"))
+        print("\n1. View Who Is Live")
         print("2. Edit Streamer List")
         print("3. Watch Stream")
         option = input("Choose an option (1-3)\nenter: ")
