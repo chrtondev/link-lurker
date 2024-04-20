@@ -6,14 +6,14 @@ def edit_streamers():
     
     # will add a streamer if 1 is entered
     if choice == '1':
-        streamer = input("enter the name of the streamer to add")
+        streamer = input("enter the name of the streamer to add\nenter: ")
         with open("streamers.txt", "a") as file:
             file.write(streamer + '\n')
         print("streamer added") # add validation
         
     # will delete a streamer from the txt file
     elif choice == '2':
-        streamer = input("enter the name of the streamer to remove: ")
+        streamer = input("enter the name of the streamer to remove\nenter: ")
         with open("streamers.txt", "r") as file:
             streamers = file.readlines()
         with open("streamers.txt", "w") as file:
